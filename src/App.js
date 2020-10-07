@@ -65,7 +65,6 @@ const etudiants = [
   },
 ];
 
-
 const handelChange = (name) => {
   alert(name);
 };
@@ -75,11 +74,10 @@ function App() {
     <div>
       <Navb />
 
-      <Dashbord etudiants={etudiants} handelChange={handelChange} >
-
+      <Dashbord etudiants={etudiants} handelChange={handelChange}>
         {/* children props */}
 
-        {"titel image"}
+        {"Title Image"}
         <img
           src="https://i1.sndcdn.com/avatars-000495007683-zg65ko-t500x500.jpg"
           alt=""
@@ -88,7 +86,6 @@ function App() {
         />
       </Dashbord>
 
-      
       <Footer />
     </div>
   );
