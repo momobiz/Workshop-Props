@@ -3,8 +3,6 @@ import { Card } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 export const Dashbord = ({ etudiants, handelChange, desc, children }) => {
-
-  
   const cardsStyle = {
     display: "flex",
     flexWrap: "wrap",
@@ -14,8 +12,8 @@ export const Dashbord = ({ etudiants, handelChange, desc, children }) => {
 
   return (
     <div style={cardsStyle}>
-      {etudiants.map(({ name, photo, secondName }) => (
-        <Card style={{ width: "300px", margin: "10px" }}>
+      {etudiants.map(({ name, photo, secondName }, i) => (
+        <Card style={{ width: "300px", margin: "10px" }} key={i}>
           <Card.Img variant="top" src={photo} />
           <Card.Body>
             <Card.Title onClick={() => handelChange(name)}>{name}</Card.Title>
@@ -26,7 +24,6 @@ export const Dashbord = ({ etudiants, handelChange, desc, children }) => {
             <br />
             <span> {desc}</span>
             <br />
-
             <span>{children}</span>
           </Card.Footer>
         </Card>
